@@ -91,6 +91,16 @@ GEMINI_API_KEY=your_gemini_api_key_here
 
 Apply it to Production, Preview, and Development if you want all deployment types to generate prompts.
 
+Optional Gemini settings:
+
+```env
+GEMINI_MODEL=gemini-2.5-flash
+GEMINI_FALLBACK_MODELS=gemini-2.5-flash-lite
+GEMINI_RETRY_ATTEMPTS=2
+```
+
+The fallback model is used when Gemini returns temporary capacity errors such as `503 UNAVAILABLE`.
+
 The deployed frontend calls the Vercel Function at `/api/generate-stitch-prompt`. The local Express server remains available for `npm run dev`.
 
 ## How To Use
