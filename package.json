@@ -1,0 +1,26 @@
+{
+  "name": "stitch-prompt-generator",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "Stitch Prompt Automation Dashboard for generating professional website design prompts with Gemini AI.",
+  "scripts": {
+    "dev": "concurrently \"npm run server\" \"npm run client\"",
+    "client": "vite client --host 0.0.0.0 --port 5173",
+    "server": "node server/index.js",
+    "build": "vite build client --outDir ../dist/client --emptyOutDir",
+    "preview": "vite preview client --host 0.0.0.0 --port 4173",
+    "start": "node server/index.js"
+  },
+  "dependencies": {
+    "@google/genai": "^2.10.0",
+    "@vitejs/plugin-react": "^5.1.1",
+    "concurrently": "^9.2.1",
+    "cors": "^2.8.5",
+    "dotenv": "^17.2.3",
+    "express": "^5.2.1",
+    "vite": "^7.2.7",
+    "react": "^19.2.3",
+    "react-dom": "^19.2.3"
+  }
+}
