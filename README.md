@@ -71,6 +71,28 @@ Backend API:
 http://localhost:5000
 ```
 
+## Deploy To Vercel
+
+Import this GitHub repo into Vercel and use these settings:
+
+```text
+Framework Preset: Vite
+Root Directory: ./
+Install Command: npm install
+Build Command: npm run build
+Output Directory: dist/client
+```
+
+Add this environment variable in Vercel Project Settings:
+
+```env
+GEMINI_API_KEY=your_gemini_api_key_here
+```
+
+Apply it to Production, Preview, and Development if you want all deployment types to generate prompts.
+
+The deployed frontend calls the Vercel Function at `/api/generate-stitch-prompt`. The local Express server remains available for `npm run dev`.
+
 ## How To Use
 
 1. Enter the company name.
